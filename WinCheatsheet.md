@@ -4,9 +4,9 @@ work in progress
 
 ## Usefull information
 
-https://gist.github.com/babutzc/f68f5414fc8595ca8f80abbe36d7b946
-https://ired.team/offensive-security/code-execution/powershell-constrained-language-mode-bypass
-https://github.com/moatn/cheatsheets/blob/master/windowsstuff.md
+- https://gist.github.com/babutzc/f68f5414fc8595ca8f80abbe36d7b946
+- https://ired.team/offensive-security/code-execution/powershell-constrained-language-mode-bypass
+- https://github.com/moatn/cheatsheets/blob/master/windowsstuff.md
 
 ## Information gathering
 
