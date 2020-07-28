@@ -94,7 +94,7 @@ net localgroup administrators username /add
 
 ## Downloading Files
 
-### kali
+### Kali
 ```
 python3 -m http.server 80
 ```
