@@ -74,7 +74,7 @@ Get rid of base64:
 ```
 cat ldapdump | awk '{print s$1}' | sort | uniq -c| sort -nr | grep : 
 ```
-If you find anything interessting search for it in the dump
+If you find anything interesting search for it in the dump
 
 ## gaining access
 Check
