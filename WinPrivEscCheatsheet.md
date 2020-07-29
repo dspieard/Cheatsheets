@@ -1,4 +1,4 @@
-Windows(Powershell) Cheatsheet
+Win PrivEsc Cheatsheet
 =====================
 work in progress
 
