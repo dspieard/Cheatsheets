@@ -1,4 +1,4 @@
-Win PrivEsc Cheatsheet
+Win Privesc Cheatsheet
 =====================
 work in progress
 
